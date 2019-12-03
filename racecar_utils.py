@@ -81,7 +81,7 @@ class Racecar:
         if not released:
             cap.release()
             released = True
-        cap = cv2.VideoCapture(2)
+        cap = cv2.VideoCapture(video_port)
         resize_cap(cap, resize_height, resize_width)
         released = False
         while rospy.get_time() - t < limit and not rospy.is_shutdown():
