@@ -32,6 +32,20 @@ except:
     print('ipywidgets is not installed')
 
 #############################
+#### Parameters
+#############################
+
+# Video Capture Port
+video_port = 2
+
+# Display ID
+current_display_id = 1 # keeps track of display id
+
+# Resize dimensions
+resize_width = 640
+resize_height = 480
+
+#############################
 #### Racecar ROS Class
 #############################
 
@@ -103,21 +117,6 @@ class Racecar:
         self.stop()
         self.pub_drive.publish(self.last_drive)
         time.sleep(0.1)
-        
-        
-#############################
-#### Parameters
-#############################
-
-# Video Capture Port
-video_port = 2
-
-# Display ID
-current_display_id = 1 # keeps track of display id
-
-# Resize dimensions
-resize_width = 640
-resize_height = 480
 
 #############################
 #### General Display
